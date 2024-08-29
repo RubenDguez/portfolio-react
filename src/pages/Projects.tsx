@@ -62,7 +62,7 @@ export default function Projects() {
   return (
     <div className='card-container'>
       {projects.map((project, i) => (
-        <m.div key={project.title} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: (i * 0.35), ease: 'easeOut' }}>
+        <m.div key={project.title} initial={{ opacity: 0, y: '100%' }} animate={{ opacity: 1, y: 0, rotate: 360 }} transition={{ duration: (i * 0.45), ease: 'easeOut' }}>
           <Card title={project.title} img={project.image} url={project.url} description={project.description} />
         </m.div>
       ))}

@@ -3,8 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion as m } from 'framer-motion';
 
 const links = [
-  { title: 'Home', to: '/' },
-  { title: 'About', to: '/about' },
+  { title: 'About', to: '/' },
   { title: 'Portfolio', to: '/portfolio' },
   { title: 'Contact', to: '/contact' },
   { title: 'Resume', to: '/resume' },

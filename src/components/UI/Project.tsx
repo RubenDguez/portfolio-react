@@ -1,4 +1,4 @@
-export default function Card({ title, img, url, description }: { title: string; img: string; url: string; description: string }) {
+export default function Project({ title, img, url, description }: { title: string; img: string; url: string; description: string }) {
   return (
     <a href={url} target="_blank">
       <div className="card">

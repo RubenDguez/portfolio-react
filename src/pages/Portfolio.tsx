@@ -1,4 +1,4 @@
-import Card from '../components/UI/Card';
+import Project from '../components/UI/Project';
 import {motion as m} from 'framer-motion';
 
 const projects = [
@@ -24,7 +24,7 @@ const projects = [
   {
     title: 'README Gen Pro',
     image:
-      'https://img.freepik.com/premium-psd/background-pattern-design-best-quality-hyper-realistic-wallpaper-image-banner-template_643360-390732.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1720915200&semt=ais_user',
+      'https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2019/12/markdown-logo-on-a-blue-background.png',
     url: 'https://github.com/RubenDguez/readme-pro',
     description:
       'A user-friendly application designed to generate professional README files effortlessly. This tool serves as a centralized platform where users can quickly and easily create well-structured README files for their projects.',
@@ -58,12 +58,14 @@ const projects = [
     description: '',
   },
 ];
-export default function Projects() {
+export default function Portfolio() {
   return (
     <div className='card-container'>
       {projects.map((project, i) => (
-        <m.div key={project.title} initial={{ opacity: 0, y: '100%' }} animate={{ opacity: 1, y: 0, rotate: 360 }} transition={{ duration: (i * 0.45), ease: 'easeOut' }}>
-          <Card title={project.title} img={project.image} url={project.url} description={project.description} />
+        <m.div key={project.title} initial={{ opacity: 0, y: '100%' }} animate={{ opacity: 1, y: 0 }} transition={{ duration: (0.45 * i), ease: 'easeOut' }}>
+          <m.div whileHover={{ scale: 1.1 }} transition={{ duration: (0.45), ease: 'easeOut' }}>
+            <Project title={project.title} img={project.image} url={project.url} description={project.description} />
+          </m.div>
         </m.div>
       ))}
     </div>

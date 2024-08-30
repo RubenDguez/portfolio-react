@@ -1,10 +1,11 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { motion as m } from 'framer-motion';
 
-const buttons = [
+const links = [
   { title: 'Home', to: '/' },
   { title: 'About', to: '/about' },
-  { title: 'Projects', to: '/projects' },
+  { title: 'Portfolio', to: '/portfolio' },
   { title: 'Contact', to: '/contact' },
   { title: 'Resume', to: '/resume' },
 ];
@@ -12,7 +13,7 @@ const buttons = [
 export default function Navigation() {
   return (
     <div className="navigation">
-      {buttons.map((button) => (
+      {links.map((button) => (
         <NavButton key={button.title} to={button.to}>
           {button.title}
         </NavButton>
@@ -25,8 +26,10 @@ const NavButton: FunctionComponent<PropsWithChildren<{ to: string }>> = function
   const { pathname } = useLocation();
 
   return (
-    <Link className={pathname === to ? 'active' : ''} to={to} >
-      {children}
+    <Link className={pathname === to ? 'active' : ''} to={to}>
+      <m.div whileHover={{ scale: 1.3 }} transition={{ duration: 0.75, ease: 'easeOut' }}>
+        {children}
+      </m.div>
     </Link>
   );
 };

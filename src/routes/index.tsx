@@ -3,7 +3,7 @@ import App from "../App";
 import Error from "../pages/Error";
 import Home from "../pages/Home";
 import About from "../pages/About";
-import Projects from "../pages/Projects";
+import Portfolio from "../pages/Portfolio";
 import Contact from "../pages/Contact";
 import Resume from "../pages/Resume";
 
@@ -22,8 +22,8 @@ const routes = createBrowserRouter([
                 element: <About />
             },
             {
-                path: '/projects',
-                element: <Projects />
+                path: '/portfolio',
+                element: <Portfolio />
             },
             {
                 path: '/contact',

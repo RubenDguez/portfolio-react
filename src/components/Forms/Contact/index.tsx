@@ -1,20 +1,24 @@
 import { FormEvent, useCallback, useState } from 'react';
 
+const initialError = {
+  name: false,
+  email: false,
+  message: false,
+}
+
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [hasError, setHasError] = useState({
-    name: false,
-    email: false,
-    message: false,
-  });
+  const [hasError, setHasError] = useState(initialError);
   const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      setHasError({ name: false, email: false, message: false });
+      setSuccessMessage('');
+      setHasError(initialError);
       setErrorMessage('');
 
       if (!name) {
@@ -32,12 +36,21 @@ export default function ContactForm() {
         setErrorMessage('Message is required');
         return;
       }
+
+      setSuccessMessage('Message sent successfully');
+      setHasError(initialError);
+      setErrorMessage('');
+      setMessage('');
+      setName('');
+      setEmail('');
+
     },
     [email, message, name],
   );
   return (
     <form onSubmit={(e) => handleSubmit(e)} className="form">
       {(hasError.name || hasError.message || hasError.email) && <h3 className="form-error-message">{errorMessage}</h3>}
+      {(successMessage) && <h3 className="form-success-message">{successMessage}</h3>}
       <div className="form-control">
         <label htmlFor="name">Name</label>
         <input value={name} onChange={(e) => setName(e.target.value)} type="text" id="name" name="name" />

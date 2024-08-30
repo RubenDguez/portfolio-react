@@ -1,73 +1,60 @@
-import { FormEvent, useCallback, useState } from 'react';
-
-const initialError = {
-  name: false,
-  email: false,
-  message: false,
-}
+import { useEffect } from 'react';
+import useContact from './useContact';
 
 export default function ContactForm() {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [hasError, setHasError] = useState(initialError);
-  const [errorMessage, setErrorMessage] = useState('');
-  const [successMessage, setSuccessMessage] = useState('');
+  const {
+    name,
+    email,
+    message,
+    hasError,
+    errorMessage,
+    successMessage,
+    disabled,
+    setDisabled,
+    setSuccessMessage,
+    setName,
+    setEmail,
+    setMessage,
+    validateName,
+    validateEmail,
+    validateMessage,
+    handleSubmit,
+  } = useContact();
 
-  const handleSubmit = useCallback(
-    (e: FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      setSuccessMessage('');
-      setHasError(initialError);
-      setErrorMessage('');
+  useEffect(() => {
+    if (localStorage.getItem('sent') && JSON.parse(localStorage.getItem('sent')!) === 'true') {
+      setDisabled(true);
+      setSuccessMessage('You have sent me a message already, I will get back to you soon.');
+    }
+  }, [setDisabled, setSuccessMessage]);
 
-      if (!name) {
-        setHasError((hasError) => ({ ...hasError, name: true }));
-        setErrorMessage('Name is required');
-        return;
-      }
-      if (!email) {
-        setHasError((hasError) => ({ ...hasError, email: true }));
-        setErrorMessage('Email is required');
-        return;
-      }
-      if (!message) {
-        setHasError((hasError) => ({ ...hasError, message: true }));
-        setErrorMessage('Message is required');
-        return;
-      }
+  useEffect(() => {
+    if (successMessage) {
+      setDisabled(true);
+    }
+  }, [successMessage, setDisabled]);
 
-      setSuccessMessage('Message sent successfully');
-      setHasError(initialError);
-      setErrorMessage('');
-      setMessage('');
-      setName('');
-      setEmail('');
-
-    },
-    [email, message, name],
-  );
   return (
     <form onSubmit={(e) => handleSubmit(e)} className="form">
       {(hasError.name || hasError.message || hasError.email) && <h3 className="form-error-message">{errorMessage}</h3>}
-      {(successMessage) && <h3 className="form-success-message">{successMessage}</h3>}
+      {successMessage && <h3 className="form-success-message">{successMessage}</h3>}
       <div className="form-control">
         <label htmlFor="name">Name</label>
-        <input value={name} onChange={(e) => setName(e.target.value)} type="text" id="name" name="name" />
+        <input disabled={disabled} value={name} onChange={(e) => setName(e.target.value)} onBlur={() => validateName()} type="text" id="name" name="name" />
         {hasError.name && <p>{errorMessage}</p>}
       </div>
       <div className="form-control">
         <label htmlFor="email">Email</label>
-        <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" id="email" name="email" />
+        <input disabled={disabled} value={email} onChange={(e) => setEmail(e.target.value)} onBlur={() => validateEmail()} type="email" id="email" name="email" />
         {hasError.email && <p>{errorMessage}</p>}
       </div>
       <div className="form-control">
         <label htmlFor="email">Message</label>
-        <textarea value={message} rows={4} onChange={(e) => setMessage(e.target.value)} id="message" name="message" />
+        <textarea disabled={disabled} value={message} rows={4} onChange={(e) => setMessage(e.target.value)} onBlur={() => validateMessage()} id="message" name="message" />
         {hasError.message && <p>{errorMessage}</p>}
       </div>
       <div className="form-control">
-        <button>Submit</button>
+        <button disabled={disabled}>Submit</button>
       </div>
     </form>
   );

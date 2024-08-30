@@ -16,7 +16,7 @@ export default function About() {
     <m.div className="home-wrapper" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.75, ease: 'easeOut' }}>
       <Typewriter speed={250} lines={lines} />
       <div className="home">
-        <m.div animate={{ x: 0, y: 0, scale: 1 }} transition={{ duration: 0.75 }} className="me"></m.div>
+        <div className="me"></div>
         <p>
           Experienced IT Programmer Analyst with a proven track record of success in driving automation and efficiency within the energy and engineering sectors. With a keen eye
           for innovation, I excel in leveraging cutting-edge technologies to develop robust solutions that not only meet but exceed client expectations. My expertise spans across

@@ -207,6 +207,17 @@ body {
   font-weight: 400;
 }
 
+.form-success-message {
+  color: var(--light-color);
+  background-color: var(--background);
+  border-radius: 4px;
+  padding: 0.45rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
 .form-control {
   display: flex;
   flex-direction: column;

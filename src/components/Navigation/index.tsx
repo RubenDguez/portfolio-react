@@ -1,5 +1,5 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const buttons = [
   { title: 'Home', to: '/' },
@@ -22,12 +22,11 @@ export default function Navigation() {
 }
 
 const NavButton: FunctionComponent<PropsWithChildren<{ to: string }>> = function ({ children, to }) {
-  const navigate = useNavigate();
   const { pathname } = useLocation();
 
   return (
-    <button className={pathname === to ? 'active' : ''} onClick={() => navigate(to)}>
+    <Link className={pathname === to ? 'active' : ''} to={to} >
       {children}
-    </button>
+    </Link>
   );
 };

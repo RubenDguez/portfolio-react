@@ -15,7 +15,7 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   padding: 3rem 2rem 1.5rem 2rem;
 }
 
@@ -32,20 +32,14 @@ body {
 
 .navigation {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.navigation > button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 4px 12px;
-  border-radius: 4px;
-
+.navigation > a {
   transition: all 0.5s ease;
 }
 
-.navigation > button:hover {
+.navigation > a:hover {
   color: var(--light-color);
 }
 
@@ -325,14 +319,20 @@ body {
 }
 
 
-@media screen and (width <= 650px) {
+@media screen and (width <= 700px) {
   .header {
-    margin: 0;
     padding: 1rem;
+    margin-top: 2rem;
   }
 
+  .typewriter {
+    display: none;
+  }
+}
+
+@media screen and (width <= 800px) {
   .typewriter h3 {
-    font-size: 0.75rem;
+    font-size: 0.95rem;
     letter-spacing: normal;
   }
 }
@@ -340,7 +340,16 @@ body {
 @media screen and (width <= 990px) {
   .header {
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
+  }
+
+  .home-wrapper {
+    padding-top: 3rem;
+  }
+  .typewriter {
+    align-items: start;
+    height: 15%;
   }
 
   .home {

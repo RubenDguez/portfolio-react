@@ -32,10 +32,11 @@ body {
 
 .navigation {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.85rem;
 }
 
 .navigation > a {
+  font-size: 0.75rem;
   transition: all 0.5s ease;
 }
 
@@ -247,24 +248,6 @@ body {
   background-color: var(--light-color);
 }
 
-.download-button {
-  background-color: white;
-  border: 1px solid var(--light-color);
-  border-radius: 4px;
-  padding: 0.35rem 1rem;
-  cursor: pointer;
-  width: 300px;
-  min-width: 300px;
-  text-align: center;
-
-  transition: all 0.5s ease;
-}
-
-.download-button:hover {
-  color: white;
-  background-color: var(--light-color);
-}
-
 .resume {
   display: flex;
   flex-direction: column;
@@ -273,8 +256,41 @@ body {
   gap: 2rem;
   height: 100%;
   padding-bottom: 3rem;
-  margin-top: 2rem;
 }
+
+.download-button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid var(--background);
+  border-radius: 4px;
+  background-color: transparent;
+
+  transition: all 0.5s ease;
+}
+
+.download-button:hover {
+  box-shadow: 
+    inset 0 -0.25rem 1rem var(--light-color),
+    0 0 0 2px white,
+    0.3em 0.3em 1em var(--light-color); 
+}
+
+.download-button #download-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 4px 4px 0px 0px;
+  background-image: url('https://www.veteransplaceusa.org/wp-content/uploads/2021/10/GettyImages-166741010.jpg');
+  background-color: var(--light-color);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: luminosity;
+}
+
+.download-button #download-text {
+  margin: 1rem 0px;
+}
+
 
 .footer {
   display: flex;

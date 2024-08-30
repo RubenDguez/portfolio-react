@@ -17,6 +17,10 @@ a {
     color: inherit;
 }
 
+li  {
+    list-style: none;
+}
+
 body {
     max-width: 1280px;
     margin: 0 auto;

@@ -4,7 +4,7 @@ import { motion as m } from 'framer-motion';
 const projects: Array<ProjectProps> = [
   {
     title: 'Personal Blog',
-    img: 'https://images.pexels.com/photos/262508/pexels-photo-262508.jpeg',
+    img: '/_blog.jpeg',
     description: 'A dynamic, user-friendly personal blog platform where you can share your thoughts, experiences, and ideas with the world. ',
     gitHub: 'https://github.com/RubenDguez/blogs',
     deployment: 'https://rubendguez.github.io/blogs/',
@@ -12,7 +12,7 @@ const projects: Array<ProjectProps> = [
   },
   {
     title: 'Body Boss',
-    img: 'https://st3.depositphotos.com/1875497/18199/i/450/depositphotos_181998538-stock-photo-abstract-blur-fitness-gym-interior.jpg',
+    img: '/_gym.jpg',
     description: 'A comprehensive fitness tracking web application designed to help users manage their workouts, track progress, and stay motivated.',
     gitHub: 'https://github.com/RubenDguez/body-boss',
     deployment: 'https://rubendguez.github.io/body-boss/pages/dashboard.html',
@@ -20,7 +20,7 @@ const projects: Array<ProjectProps> = [
   },
   {
     title: 'README Gen Pro',
-    img: 'https://static1.howtogeekimages.com/wordpress/wp-content/uploads/2019/12/markdown-logo-on-a-blue-background.png',
+    img: '/_markdown.avif',
     description: 'A user-friendly application designed to generate professional README files effortlessly. This tool serves as a centralized platform where users can quickly and easily create well-structured README files for their projects.',
     gitHub: 'https://github.com/RubenDguez/readme-pro',
     deployment: 'https://www.youtube.com/watch?v=opUc3G43uqc',
@@ -28,7 +28,7 @@ const projects: Array<ProjectProps> = [
   },
   {
     title: 'Vehicle Builder',
-    img: 'https://static.vecteezy.com/system/resources/thumbnails/044/531/300/small/ai-generated-conveyor-belt-at-a-car-factory-generative-ai-photo.jpeg',
+    img: '/_car-factory.jpeg',
     description: 'A command-line application that allows users to create, select, and interact with different types of vehicles. Users can choose to create a new vehicle or select an existing one, provide details about the vehicle, and then perform various actions with it.',
     gitHub: 'https://github.com/RubenDguez/vehicle-builder',
     deployment: 'https://www.youtube.com/watch?v=MKE38wU4sUo',
@@ -36,7 +36,7 @@ const projects: Array<ProjectProps> = [
   },
   {
     title: 'Weather Dashboard',
-    img: 'https://static.vecteezy.com/system/resources/thumbnails/016/520/272/small_2x/the-dark-sky-had-clouds-gathered-to-the-left-and-a-strong-storm-before-it-rained-bad-weather-sky-photo.jpg',
+    img: '/_weather-dashboard.jpg',
     description: 'A web application that allows travelers to view current and future weather conditions for multiple cities. This app helps users plan their trips accordingly by providing a 5-day weather forecast.',
     gitHub: 'https://github.com/RubenDguez/weather',
     deployment: 'https://weather-app-pro-v3mp.onrender.com/',
@@ -44,7 +44,7 @@ const projects: Array<ProjectProps> = [
   },
   {
     title: 'Employee Tracker',
-    img: 'https://image.cnbcfm.com/api/v1/image/107146370-1667576072340-gettyimages-1404892156-untitled2.jpeg?v=1667580570',
+    img: '/_employee-tracker.jpeg',
     description: "A command-line application that allows business owners to efficiently manage their company's employee database. The application is built using Node.js, Inquirer, and PostgreSQL. It provides a user-friendly interface for viewing, adding, and updating information about departments, roles, and employees within a company.",
     gitHub: 'https://github.com/RubenDguez/employee-tracker',
     deployment: 'https://www.youtube.com/watch?v=XBAS-EguFtk',

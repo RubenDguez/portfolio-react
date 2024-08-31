@@ -198,8 +198,8 @@ body {
 }
 
 .form-error-message {
-  color: tomato;
-  border: 1px solid tomato;
+  color: var(--light-color);
+  border: 1px solid var(--light-color);
   border-radius: 4px;
   padding: 0.45rem;
   text-align: center;
@@ -236,7 +236,7 @@ body {
 .form-control p {
   font-size: 0.75rem;
   padding-left: 1rem;
-  color: tomato;
+  color: var(--light-color)
 }
 
 .form-control button {

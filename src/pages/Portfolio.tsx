@@ -54,6 +54,69 @@ const projects: Array<ProjectProps> = [
     deployment: 'https://www.youtube.com/watch?v=XBAS-EguFtk',
     type: 'video',
   },
+  {
+    title: 'GitHub Candidate Search',
+    img: '/_github-search.png',
+    description:
+      "The application utilizes the GitHub API to retrieve user profiles and display key information such as name, username, location, avatar, email, company, and GitHub profile link. Users can save or reject candidates, with saved candidates persisting between sessions using local storage.",
+    gitHub: 'https://github.com/RubenDguez/candidate-search',
+    deployment: '',
+    type: 'video',
+  },
+  {
+    title: 'Kanban Board',
+    img: '/_kanban-board.png',
+    description:
+      "This project is a full-stack Kanban board application designed to enhance team productivity through task management. The application includes a secure login system using JSON Web Tokens (JWT) for authentication. It allows users to log in, manage tasks in a Kanban-style interface, and ensures that only authenticated users can access and manipulate data.",
+    gitHub: 'https://github.com/RubenDguez/kanban-board',
+    deployment: '',
+    type: 'video',
+  },
+  {
+    title: 'Social Network API',
+    img: '/_express-mongo.jpeg',
+    description:
+      "The Social Network API is a backend solution designed for social media platforms, where users can share their thoughts, react to others' thoughts, and manage friend lists. This project is built using Express.js and MongoDB with Mongoose ODM, providing a NoSQL database solution optimized for handling large volumes of unstructured data. The API supports CRUD operations for users, thoughts, reactions, and friendships, offering the core functionalities required for a social network.",
+    gitHub: 'https://github.com/RubenDguez/social-api',
+    deployment: '',
+    type: 'video',
+  },
+  {
+    title: 'Book Search Engine',
+    img: '/_book-search-engine.jpg',
+    description:
+      "A full-stack web application built using the MERN stack (MongoDB, Express, React, Node.js), allowing users to search for books via the Google Books API, save them to their account, and manage saved books. This project refactors an existing RESTful API to use a GraphQL API powered by Apollo Server.",
+    gitHub: 'https://github.com/RubenDguez/book-search-engine',
+    deployment: 'https://book-search-engine-lepn.onrender.com/',
+    type: 'server',
+  },
+  {
+    title: 'Tech Quiz Test Suite',
+    img: '/_cypress.png',
+    description:
+      "This project adds comprehensive testing to an existing Tech Quiz application built with the MERN stack. The app allows users to take a quiz with ten random questions and view their final score. The testing suite uses Cypress to implement both component and end-to-end tests for key functionalities.",
+    gitHub: 'https://github.com/RubenDguez/tech-quiz-test-suite',
+    deployment: 'https://www.youtube.com/watch?v=MQ2cAYoAUs8&ab_channel=ArgenisDominguez',
+    type: 'video',
+  },
+  {
+    title: 'CI/CD',
+    img: '/_github-actions.jpg',
+    description:
+      "This project demonstrates the integration of a Continuous Integration (CI) and Continuous Deployment (CD) pipeline using GitHub Actions. The application runs Cypress tests on every pull request (PR) to the develop branch and automatically deploys to Render when changes are merged into the main branch.",
+    gitHub: 'https://github.com/RubenDguez/ci-cd-github',
+    deployment: 'https://ci-cd-github.onrender.com/',
+    type: 'server',
+  },
+  {
+    title: 'Takeout Restaurant Menu and Order System',
+    img: '/_python.jpg',
+    description:
+      "This project implements a restaurant ordering system where a customer can view a menu, place an order, update their order, and receive an itemized receipt. The system is designed for accessibility, enabling users with hearing and vocal impairments to interact with the system using a text-based interface. The core functionalities of the system include viewing menu items, adding them to an order, updating quantities, and receiving a detailed receipt with the total price.",
+    gitHub: 'https://github.com/RubenDguez/python-take-out-restaurant',
+    deployment: '',
+    type: 'video',
+  },
 ];
 
 export default function Portfolio() {

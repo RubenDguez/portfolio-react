@@ -26,7 +26,7 @@ export default function Resume() {
           <li>GraphQL</li>
         </ul>
       </div>
-      <m.a whileHover={{ scale: 1.1 }} className="download-button" href="/CV.pdf" download>
+      <m.a whileHover={{ scale: 1.1 }} className="download-button" href="/RubenDominguezCV.pdf" download>
         <div id="download-image"></div>
         <div id="download-text">Download</div>
       </m.a>

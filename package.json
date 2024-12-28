@@ -1,6 +1,7 @@
 {
   "name": "ruben-portfolio",
   "private": true,
+  "homepage": "https://RubenDguez.github.io/portfolio-react",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

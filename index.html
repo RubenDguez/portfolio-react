@@ -7,10 +7,19 @@
     <title>Ruben Dominguez</title>
 
     <script src="https://kit.fontawesome.com/67a6837f6b.js" crossorigin="anonymous"></script>
-    <script type="module" crossorigin src="/portfolio-react/assets/index-CP9HXUXR.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio-react/assets/index-0gQ21VuA.css">
+    <script type="module" crossorigin src="/portfolio-react/assets/main-DbrZ_F8c.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-react/assets/main-0gQ21VuA.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      (() => {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </body>
 </html>

@@ -298,7 +298,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 4px 4px 0px 0px;
-  background-image: url('/_resume.jpg');
+  background-image: url('/resume.jpg');
   background-color: var(--light-color);
   background-position: center;
   background-size: cover;

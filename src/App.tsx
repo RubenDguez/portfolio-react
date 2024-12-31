@@ -10,6 +10,7 @@ import Portfolio from "./pages/Portfolio.tsx";
 import Contact from "./pages/Contact.tsx";
 import Resume from "./pages/Resume.tsx";
 import About from "./pages/About.tsx";
+import Error from "./pages/Error.tsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Route path="/portfolio" element={<Portfolio/>}/>
                 <Route path="/contact" element={<Contact/>}/>
                 <Route path="/resume" element={<Resume/>}/>
+                <Route path='*' element={<Error />} />
               </Routes>
             </AnimatePresence>
           </div>
